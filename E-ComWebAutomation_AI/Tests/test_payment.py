@@ -2,7 +2,7 @@ import pytest
 from pages.payment_page.payment_page import PaymentPage
 from pages.cart_page.cart_page import CartPage
 from pages.login_page.login import LoginPage
-from .test_data import TestData
+from Tests.test_data import TestData
 
 
 @pytest.fixture

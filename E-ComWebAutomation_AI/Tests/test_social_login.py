@@ -2,7 +2,7 @@ import os
 import pytest
 from selenium.webdriver.common.by import By
 from pages.login_page.login import LoginPage
-from .test_data import TestData
+from Tests.test_data import TestData
 
 
 @pytest.mark.skipif(os.getenv('RUN_SOCIAL_TESTS', 'false').lower() != 'true', reason="Social login tests disabled by default")

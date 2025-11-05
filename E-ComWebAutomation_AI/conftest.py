@@ -49,14 +49,18 @@ def pytest_configure(config):
     logger = init_logger(run_dir)
     logger.info(f"Test run directory created: {run_dir}")
 
-    # Configure test session
-    config._metadata.update({
+    # Configure test session metadata
+    metadata = {
         'Timestamp': timestamp,
         'Environment': os.getenv('TEST_ENV', 'qa'),
         'Browser': 'Chrome',
         'Parallel': str(test_config.get('test', 'parallel')),
         'Headless': str(test_config.get('browser', 'headless'))
-    })
+    }
+    
+    # Add metadata entries as individual items
+    for key, value in metadata.items():
+        config.stash[f'metadata/{key}'] = value
 
     # Set parallel workers if enabled
     if test_config.get('test', 'parallel'):
@@ -79,18 +83,36 @@ def setup_driver(request, browser_config):
     """
     # Configure Chrome options
     chrome_options = Options()
+    chrome_options.page_load_strategy = 'none'  # Don't wait for full page load
     chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--ignore-certificate-errors')
     chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-gpu')
+    chrome_options.add_argument('--disable-extensions')
+    chrome_options.add_argument('--disable-software-rasterizer')
+    chrome_options.add_argument('--disk-cache-size=0')  # Disable disk cache
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])  # Reduce logging
     
     # Apply browser config
     if browser_config['headless']:
-        chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--headless=new')  # new headless mode
     
     # Set viewport size
     chrome_options.add_argument(f"--window-size={browser_config['viewport_width']},{browser_config['viewport_height']}")
     
-    # Create a unique ChromeDriver instance for each worker
-    service = ChromeService(ChromeDriverManager().install())
+    # Try to use an existing ChromeDriver if available
+    driver_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "chromedriver.exe")
+    
+    if not os.path.exists(driver_path):
+        try:
+            driver_path = ChromeDriverManager().install()
+        except Exception as e:
+            logger.error(f"Failed to install ChromeDriver: {str(e)}")
+            pytest.skip("ChromeDriver installation failed")
+    
+    # Create ChromeService with the driver path
+    service = ChromeService(driver_path)
+    
     driver = webdriver.Chrome(service=service, options=chrome_options)
     driver.implicitly_wait(browser_config['timeout'])
     

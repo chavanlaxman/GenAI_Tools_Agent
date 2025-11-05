@@ -1,7 +1,7 @@
 import pytest
 from pages.forgot_password.forgot_password_page import ForgotPasswordPage
 from pages.login_page.login import LoginPage
-from .test_data import TestData
+from Tests.test_data import TestData
 
 
 def test_forgot_password_flow(driver_for_test):

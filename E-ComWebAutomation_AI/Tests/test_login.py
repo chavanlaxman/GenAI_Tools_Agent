@@ -1,7 +1,7 @@
 import pytest
 from pages.login_page.login import LoginPage
 from utils.test_helpers import test_case, retry_if_fails
-from .test_data import TestData
+from Tests.test_data import TestData
 
 
 class TestLogin:

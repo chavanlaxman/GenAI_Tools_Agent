@@ -1,6 +1,6 @@
 import pytest
 from pages.login_page.register_page import RegistrationPage
-from .test_data import TestData
+from Tests.test_data import TestData
 
 
 class TestRegistration:

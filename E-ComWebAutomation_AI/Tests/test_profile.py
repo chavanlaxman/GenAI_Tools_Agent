@@ -1,7 +1,7 @@
 import pytest
 from pages.profile_page.profile_page import ProfilePage
 from pages.login_page.login import LoginPage
-from .test_data import TestData
+from Tests.test_data import TestData
 
 
 @pytest.fixture
