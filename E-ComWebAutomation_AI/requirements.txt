@@ -1,0 +1,31 @@
+# Core testing requirements
+pytest==7.4.3
+pytest-html==4.1.1
+pytest-xdist==3.3.1            # For parallel test execution
+pytest-rerunfailures==12.0     # For retrying failed tests
+pytest-timeout==2.2.0          # For test timeouts
+pytest-ordering==0.6           # For test ordering when needed
+pytest-sugar==0.9.7           # For better CLI output
+
+# Browser automation
+selenium==4.15.2
+webdriver-manager==4.0.1
+selenium-stealth==1.0.6       # For avoiding bot detection
+pyautogui==0.9.54            # For system-level interactions if needed
+
+# Additional utilities
+python-dotenv==1.0.0         # For environment variable management
+requests==2.31.0             # For API calls if needed
+cryptography==41.0.5         # For secure handling of sensitive data
+openpyxl==3.1.2             # For Excel report generation
+python-json-logger==2.0.7    # For JSON format logging
+allure-pytest==2.13.2       # For Allure reporting
+pytest-metadata==3.0.0       # For test metadata
+boto3==1.28.44              # For AWS interactions (optional)
+psutil==5.9.5               # For system resource monitoring
+
+# Development tools
+black==23.9.1               # For code formatting
+pylint==2.17.5             # For code linting
+mypy==1.5.1                # For type checking
+pre-commit==3.4.0          # For git hooks

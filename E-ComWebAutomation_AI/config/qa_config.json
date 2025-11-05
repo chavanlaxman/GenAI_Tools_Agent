@@ -1,0 +1,37 @@
+{
+    "browser": {
+        "headless": true,
+        "viewport_width": 1920,
+        "viewport_height": 1080,
+        "timeout": 10
+    },
+    "test": {
+        "base_url": "https://rahulshettyacademy.com/client/#/auth/login",
+        "parallel": true,
+        "max_workers": "auto",
+        "rerun_failures": true,
+        "max_reruns": 2
+    },
+    "reporting": {
+        "screenshots_on_failure": true,
+        "video_recording": false,
+        "excel_report": true,
+        "html_report": true,
+        "allure_report": true
+    },
+    "logging": {
+        "console_level": "INFO",
+        "file_level": "DEBUG",
+        "capture_stdout": true
+    },
+    "users": {
+        "standard": {
+            "email": "test.qa@shop.com",
+            "password": "ValidPassword123!"
+        },
+        "admin": {
+            "email": "admin@shop.com",
+            "password": "AdminPass456!"
+        }
+    }
+}
