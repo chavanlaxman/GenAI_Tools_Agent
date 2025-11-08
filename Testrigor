@@ -1,0 +1,49 @@
+TestRigor: A Comprehensive Framework for Automated Software Testing
+how it works: give your test description, and it generates test cases, executes them, and reports results.
+https://app.testrigor.com/test-suites/wGcnyuhkfessL7P9x/test-cases
+TestRigor is an advanced automated software testing framework designed to streamline the testing process. By simply providing a description of the test you want to perform,
+ TestRigor generates relevant test cases, executes them, and compiles detailed reports on the results.
+
+ TestRigor is an AI-powered test automation tool that allows QA engineers to create and run tests using plain English commands instead of traditional code.
+It focuses on codeless automation using Natural Language Processing (NLP) and Generative AI to reduce maintenance and speed up test creation.
+
+| Capability                            | Description                                                                                                                               |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| 🗣️ **NLP-based Test Creation**       | Allows test creation using plain English (e.g., *“click on login button”*, *“enter email as ‘[test@gmail.com](mailto:test@gmail.com)’”*). |
+| 🤖 **Self-Healing Tests**             | Automatically adapts to UI changes (like changed element locators or attributes).                                                         |
+| 🧩 **Generative AI Test Suggestions** | Suggests and generates test cases from user stories, requirements, or manual test cases.                                                  |
+| 🧠 **Contextual Understanding**       | Understands user intent (not just element names), improving reliability of automation.                                                    |
+| 🔁 **Cross-Platform Support**         | Automates **Web**, **Mobile**, and **API** testing in the same framework.                                                                 |
+| 🔍 **Smart Test Maintenance**         | AI identifies flaky tests or redundant steps and suggests fixes.                                                                          |
+| 📊 **Test Analytics & Reporting**     | Generates intelligent insights about test runs, failures, and coverage.                                                                   |
+
+
+
+| Testing Layer                | How TestRigor Helps                                                       |
+| ---------------------------- | ------------------------------------------------------------------------- |
+| **UI / End-to-End Testing**  | Automates full user workflows across browser and mobile.                  |
+| **Functional Testing**       | Validates app features using human-like actions and NLP test steps.       |
+| **API Testing**              | Supports REST/SOAP calls and validations directly within same test suite. |
+| **Regression Testing**       | Self-healing tests reduce maintenance during frequent UI changes.         |
+| **Acceptance Testing (UAT)** | Business teams can write executable test cases in plain English.          |
+
+
+
+Where You Can Use It (as QA Automation Engineer)
+
+To quickly automate smoke and regression tests without writing code.
+
+To convert manual test cases into automated ones.
+
+To reduce maintenance of flaky UI tests.
+
+To enable non-technical testers or business users to contribute to automation.
+
+
+Integrations
+
+Works with Jenkins, GitHub Actions, CircleCI, and other CI/CD tools.
+
+Can integrate with JIRA, TestRail, and Slack for test tracking and reporting.
+
+Supports BrowserStack and Sauce Labs for cross-browser testing.

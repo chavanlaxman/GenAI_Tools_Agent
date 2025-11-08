@@ -1,0 +1,31 @@
+MCP (Model Context Protocol) is an open protocol that defines how AI models (like ChatGPT or other LLMs) interact with external tools, databases, APIs, and systems in a secure and structured way.
+
+Purpose:
+It allows AI systems to connect safely to live data or perform actions using tools without hardcoding integrations.
+
+Example:
+
+ChatGPT uses MCP to talk to tools like:
+
+Web search
+
+Python environment
+
+Document editors (canmore)
+
+Memory (bio)
+
+This ensures structured, traceable, and secure communication between the model and connected tools.
+
+Think of it as:
+👉 “A standard way for AI to plug into external systems.
+
+In short mcps are
+
+| Concept         | Explanation                                         |
+| --------------- | --------------------------------------------------- |
+| **Full Name**   | Model Context Protocol                              |
+| **Purpose**     | Standardizes how AI models talk to external systems |
+| **Who Uses It** | ChatGPT, Claude, AI agents, automation frameworks   |
+| **Key Benefit** | Secure, consistent, extensible tool integration     |
+| **Similar To**  | API standard for LLMs (like REST for the web)       |

@@ -14,4 +14,4 @@ def test_forgot_password_flow(driver_for_test):
     fp = ForgotPasswordPage(driver_for_test)
 
     msg = fp.request_password_reset(TestData.FORGOT_EMAIL)
-    assert TestData.MESSAGES["registration"]["success"] or msg, "Forgot password flow did not return expected message"
+    assert TestData.ME  SSAGES["registration"]["success"] or msg, "Forgot password flow did not return expected message"
