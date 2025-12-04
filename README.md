@@ -1,5 +1,8 @@
 # GenAI_Tools_Agent
-LLMs: Large language models is backbone of AI Application, These models are Trained on vast  amount of data enabling them to undeestand human language, process context, and generate meaning full response. we often iteract with LLM's Throgh AI AI Assistant/ Application and chatbot
+LLMs: Large language models is backbone of AI Application, 
+These models are Trained on vast  amount of data enabling them
+to undeestand human language, process context, and generate meaning full response. 
+we often iteract with LLM's Throgh AI AI Assistant/ Application and chatbot
 
 AI Assistants/Applications
 These include tools like ChatGpt Copilot and other Gen AI Powered Solution that assist Tester to inhance productivity by providing intelligent suggestions and automation repeatative tasks
